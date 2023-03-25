@@ -46,5 +46,11 @@ pipeline {
                 sh './jenkins/deploy/deploy.sh'
             }
         }
+        
+        stage('CleanWorkspace') {
+            steps {
+                cleanWs()
+            }
+        }
     }
 }
